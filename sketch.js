@@ -19,7 +19,7 @@ function draw() {
   console.log('read: ', read);
   console.log('write: ', write);
   console.log('cleanBoard', cleanBoard);
-  if(i > 3600) { // 20 minuts worth frame count
+  if(i > 3600) { // 1 minuts worth of frame count
     i = 0;
   }
   noStroke();
