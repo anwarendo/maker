@@ -46,7 +46,6 @@ function draw() {
     i++;
     if(i >= dots.length){
       i = 0;
-      background(0);
     }
     // console.log(dots.length);
     fill(0,255,255);
@@ -70,6 +69,7 @@ function draw() {
 function keyPressed() {
   if(keyCode === LEFT_ARROW) {
     read = !read;
+    background(0);
   }
   if(keyCode === RIGHT_ARROW) {
     cleanBoard = !cleanBoard;
