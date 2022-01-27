@@ -2,13 +2,15 @@ var dots = [];
 var i = 0;
 var x = 0;
 var y = 0;
+var rad = 10;
+var expand = 0;
 var read = false;
 var cleanBoard = false;
 var write = false;
 
 function setup() {
   // noCanvas(window.innerWidth, window.innerHeight);
-  var canv = createCanvas(700, 400);
+  var canv = createCanvas(300, 300);
   canv.parent("canvas-container");
   canv.class("w3-black w3-card-4 w3-margin");
   canv.elt.style.border = "8px solid orange";
@@ -23,10 +25,10 @@ function draw() {
     i = 0;
   }
   noStroke();
-  var rad;
+  
   if(mouseIsPressed) {
     frameRate(60);
-    fill(255);
+    fill(random(100),255,random(200),random(100,200));
     rad = 10;
     var point = {'x': mouseX, 'y': mouseY};
     if(write) {
@@ -34,13 +36,19 @@ function draw() {
     } 
     
   } else {
-    frameRate(30);
+    frameRate(20);
     fill(random(100),random(255), random(100), random(30));
-    rad = random(10, 100);
+    expand++;
+    if(expand > 50) {
+      expand = 0;
+      rad = random(10);
+    } 
+    rad += random(3);
     
   }
   x = mouseX;
   y = mouseY;
+  
   ellipse(x, y, rad, rad);
   if(read) {
     i++;
