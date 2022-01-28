@@ -24,7 +24,7 @@ function draw() {
   if(i > 3600) { // 1 minuts worth of frame count
     i = 0;
   }
-  noStroke();
+  noFill();
   
   if(mouseIsPressed) {
     frameRate(60);
@@ -36,12 +36,13 @@ function draw() {
     } 
     
   } else {
-    frameRate(20);
-    fill(random(100),random(255), random(100), random(30));
+    frameRate(60);
+    stroke(random(100),random(100,255), random(100), random(30));
+    strokeWeight(1);
     expand++;
-    if(expand > 50) {
+    if(expand > 300) {
       expand = 0;
-      rad = random(10);
+      rad = random(3);
     } 
     rad += random(3);
     
