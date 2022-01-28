@@ -40,7 +40,7 @@ function draw() {
     stroke(random(100),random(100,255), random(100), random(30));
     strokeWeight(1);
     expand++;
-    if(expand > 300) {
+    if(expand > 100) {
       expand = 0;
       rad = random(3);
     } 
