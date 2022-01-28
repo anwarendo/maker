@@ -10,11 +10,11 @@ var write = false;
 
 function setup() {
   // noCanvas(window.innerWidth, window.innerHeight);
-  var canv = createCanvas(300, 300);
+  var canv = createCanvas(windowWidth*0.8, windowHeight*0.5);
   canv.parent("canvas-container");
-  canv.class("w3-black w3-card-4 w3-margin");
-  canv.elt.style.border = "8px solid orange";
-    
+  canv.class("w3-black w3-card-4 ");
+  canv.elt.style.border = "1px solid orange";
+  canv.elt.style.borderRadius = "20px";  
 }
 
 function draw() {
